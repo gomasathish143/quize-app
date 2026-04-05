@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GALLERY SLIDER</title>
+    
+</head>
+<style>
+    .slide1{
+        background: url(chicken-fried-rice7.webp);
+    }
+    .slide2{
+        background: url(chicken\ noodles.jpg);
+    }
+    .slide3{
+        background: url(shredded-chicken-sandwich-1.jpg);
+    }
+    .slide4{
+        background: url(pizza.jpg);
+    }
+    .slide5{
+        background: url(burger.jpg);
+    }
+.slide{
+    margin: 0;
+    padding: 0;
+    width:800px;
+    margin-left: 400px;
+margin-top: 80px;
+
+    height: 80vh;
+    overflow-x: hidden;
+    background-position:center ;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.arrow{
+    position: absolute;
+    top:50%;
+    margin-top:-35px;
+    width: 0;
+    height: 0;
+    cursor: pointer;
+    border-style: solid;
+    border-color: black;
+    border-radius: 3px 5px;
+
+}
+#arrow-left{
+    border-width:20px 30px 20px 0 ;
+    border-color:transparent #110f0f transparent transparent ;
+    left: 0;
+    margin-left: 20px;
+}
+#arrow-right{
+    border-width:20px 0 20px 30px ;
+    border-color:transparent transparent transparent #0c0b0b;
+    right: 0;
+    margin-right: 20px;
+}
+</style>
+<body>
+    <div class="arrow" id="arrow-left"></div>
+    <div class="slide slide1"><h1>chicken rice</h1></div>
+    <div class="slide slide2"><h1>chicken noodles</h1></div>
+    <div class="slide slide3"><h1>chicken sandwich</h1></div>
+    <div class="slide slide4"><h1>chicken pizza</h1></div>
+    <div class="slide slide5"><h1>chicken burger</h1></div>
+    <div class="arrow" id="arrow-right"></div>
+    <script src="gallery.js"></script>
+</body>
+</html>

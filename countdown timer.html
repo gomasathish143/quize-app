@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>countdown timer</title>
+</head>
+<body>
+   <p id="timer"></p> 
+   <script>
+    const countdownDate= new Date().getTime()+10000;
+    const timer=setInterval(()=>{
+        const now=new Date().getTime();
+        const distance=countdownDate-now;
+        if(distance<0){
+            clearInterval(timer);
+            document.getElementById("timer").textContent="Time's up!";
+        }else{
+            document.getElementById("timer").textContent="Time left:"+Math.floor(distance/1000)+"s";
+        }
+    },1000);
+   </script>
+</body>
+</html>

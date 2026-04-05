@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        font-family: "Jost", sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background: url(back.jpg);
+        
+        background-image: no-repeat center/cover;
+    
+    }
+    .container{
+        display: flex;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        padding: 0 20px;
+    }
+    .todo-app{
+        width: 100%;
+        max-width: 400px;
+        padding: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 30px;
+        color: rgb(18, 19, 20);
+        border-radius: 20px;
+        box-shadow: 0 0 100px black;
+        border: 5px solid rgb(86, 84, 84);
+        backdrop-filter: blur(10px);
+    }
+    h1{
+        font-size:2rem ;
+    }
+    .input-area{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    input{
+        flex: 1;
+        padding: 10px 17px;
+        font-size: 1.1rem;
+        border: none;
+        outline: none;
+        border-radius: 22px;
+        background: rgb(103, 80, 80);
+        color: aliceblue;
+    }
+    ::placeholder{
+        color: aliceblue;
+
+    }
+    button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 10px;
+        padding: 8px;
+        border-radius: 50%;
+        color: aliceblue;
+        font-size: 1.1rem;
+        background: rgb(106, 103, 103);
+        border: 2px solid rgb(16, 15, 15);
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+    button:hover{
+        transform: scale(1.1);
+     background:rgb(37, 35, 35);
+    }
+    .todos-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+</style>
+<body>
+    <div class="container">
+        <div class="todo-app">
+            <h1>To Do App</h1>
+            <form class="input-area">
+                <input type="text" id="task-input" placeholder="Add a new task....">
+                <button type="submit"id="add-task-btn"><i class="fa-solid fa-plus"></i></button>
+    
+            </form>
+            <div class="todos-container">
+                <ul id="task-list"></ul>
+                <img class="empty-image" src="todolist.webp"width="200px" height="200px">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
